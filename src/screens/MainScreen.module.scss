@@ -1,0 +1,158 @@
+
+
+.main-screen-container {
+    width: 100vw;
+    height: auto;
+    box-sizing: border-box;
+    padding: 50px 0px;
+
+    @include flex-center;
+    flex-direction: column;
+
+}
+
+.main-screen__content {
+    .main-screen__table-title {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        h1, h4 {
+            margin: 0;
+        }
+        h1 {
+            font-family: 'Inter Display', Inter, sans-serif;
+            font-size: 1.5em;
+            font-weight: 700;
+            line-height: 29.04px;
+            margin-bottom: 4px;
+        }
+        h4 {
+            font-family: Inter, sans-serif;
+            font-size: 0.75em;
+            font-weight: 400;
+            line-height: 24px;
+            color: rgba(white, 0.3);
+        }
+        @include mobile {
+            min-width: 322px;
+            width: 80vw;
+        }
+        @include tablet {
+            min-width: 675px;
+            width: 80vw;
+            h1 {
+                font-size: 3em;
+                line-height: 58.08px;
+            }
+            h4 {
+                font-size: 1em;
+                line-height: 24px;
+                margin-bottom: 18px;
+            }
+        }
+        @include desktop {
+            width: 80vw;
+            max-width: 1600px;
+            h1 {
+                font-size: 3em;
+                line-height: 58.08px;
+            }
+            h4 {
+                font-size: 1em;
+                line-height: 24px;
+                margin-bottom: 18px;
+            }
+        }
+    }
+
+}
+
+table {
+    th:nth-child(1) {
+        width: 47px;
+    }
+    th:nth-child(2) {
+        text-align: left;
+    }
+    .data-table__username-column {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-overflow: ellipsis;
+
+        svg {
+            height: 28px;
+            width: auto;
+            aspect-ratio: 1;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 4px;
+            width: auto;
+            text-align: left;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            span {
+                line-height: 14.52px;
+            }
+            a {
+                text-overflow: ellipsis;
+                font-size: 0.625em;
+                color: rgba(white, 0.4);
+                text-decoration: none;
+                line-height: 12.1px;
+            }
+        }
+    }
+    @include mobile {
+        td:nth-child(1), th:nth-child(1) {
+            width: 37px;
+        }
+        td:nth-child(3), th:nth-child(3) {
+            width: 86px;
+        }
+    }
+    @include tablet {
+        td:nth-child(3), th:nth-child(3) {
+            text-align: left;
+            width: 168px;
+        }
+        .data-table__username-column {
+            gap: 16px;
+            svg, div {
+                height: 40px;
+            }
+            div {
+                span {
+                    line-height: 19.36px;
+                }
+                a {
+                    font-size: 0.75em;
+                }
+            }
+
+        }
+    }
+    @include desktop {
+        td:nth-child(3), th:nth-child(3) {
+            text-align: left;
+            width: 168px;
+        }
+        .data-table__username-column {
+            gap: 16px;
+            svg, div {
+                height: 40px;
+            }
+            div {
+                span {
+                    line-height: 19.36px;
+                }
+                a {
+                    font-size: 0.75em;
+                }
+            }
+        }
+    }
+}
